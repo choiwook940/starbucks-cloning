@@ -109,3 +109,62 @@ header .sub-menu .search .material-icons {
   right: 5px;
   transition: 0.4s
 }
+ul.main-menu {
+  font-size: 13px;
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  z-index: 1;
+}
+ul.main-menu .item {
+  float: left;
+}
+ul.main-menu .item .item__name {
+  padding:10px 20px 34px;
+  font-family: Arial, sans-serif;
+}
+ul.main-menu .item:hover .item__name {
+  background-color: #2c2a29;
+  color: #669900;
+  border-radius: 6px 6px 0 0;
+}
+ul.main-menu .item .item__contents {width: 100%; position:fixed; left: 0; display: none;}
+ul.main-menu .item:hover .item__contents {display: block;}
+
+header .main-menu .item .item__contents .contents__menu {
+  background-color: #2C2A29;
+}
+header .main-menu .item .item__contents .contents__menu > ul {
+  padding: 20px 0;
+  display: flex;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li {
+  width: 220px;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li h4 {
+  padding: 3px 0 12px 0;
+  font-size: 14px;
+  color: #fff;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li ul li {
+  padding: 5px 0;
+  font-size: 12px;
+  color: #999;
+  cursor: pointer;
+}
+header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
+  color: #669900;
+}
+header .main-menu .item .item__contents .contents__texture {
+  padding: 26px 0;
+  font-size: 12px;
+  background-image: url("../images/main_menu_pattern.jpg");
+}
+header .main-menu .item .item__contents .contents__texture h4 {
+  color: #999;
+  font-weight: 900;
+}
+header .main-menu .item .item__contents .contents__texture p {
+  color: #64a70b;
+  margin: 4px 0 14px;
+}
