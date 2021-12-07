@@ -37,3 +37,75 @@ header .logo {
   height: 75px;
   margin:auto;
 }
+/* HEADER_sub Menu */
+header .sub-menu {
+  float: right;
+  margin-top: 10px;
+}
+header .sub-menu ul.menu {
+  font-size: 0;
+  display: block;
+  float: left;
+}
+header .sub-menu ul.menu li {
+  display: inline-block;
+  position: relative;
+
+}
+header .sub-menu ul.menu li::before {
+  content: "";
+  display: block;
+  position:absolute;
+  top:0;
+  bottom:0;
+  margin:auto;
+  height: 12px;
+  width: 1px;
+  background-color: #e5e5e5;
+}
+header .sub-menu ul.menu li:first-child::before {
+  display: none;
+}
+header .sub-menu ul.menu li a {
+  padding: 11px 16px;
+  font-size: 12px;
+  color:#656565;
+  display: block;
+}
+header .sub-menu ul.menu li a:hover {
+  color: #000;
+}
+header .sub-menu .search {
+  position:relative;
+  display: inline-block;
+  top:3px;
+}
+header .sub-menu .search input {
+  width: 36px;
+  height: 34px;
+  padding:4px 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+  color: #777;
+  font-size: 12px;
+  transition: width 0.4s;
+}
+header .sub-menu .search input:focus {
+  width: 190px;
+  border-color: #669900;
+}
+header .sub-menu .search.focused .material-icons {
+  opacity: 0;
+}
+header .sub-menu .search .material-icons {
+  position:absolute;
+  top:0;
+  bottom: 0;
+  margin: auto;
+  height: 24px;
+  right: 5px;
+  transition: 0.4s
+}
