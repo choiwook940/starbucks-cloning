@@ -18,6 +18,7 @@ searchInput.addEventListener("blur", () => {
 const badges = document.querySelector("header .badges");
 window.addEventListener("scroll", _.throttle(() => {
   if(window.scrollY > 500){
+    // gsap.to(요소, 지속시간, 옵션)
     gsap.to(badges, 0.6, {
       opacity: 0,
       display: "none"
@@ -29,3 +30,12 @@ window.addEventListener("scroll", _.throttle(() => {
     })
   }
 }, 300))
+
+// VISUAL Animation
+const fadeIns = document.querySelectorAll(".visual .fade-in");
+fadeIns.forEach((fadeIn, index) => {
+  gsap.to(fadeIn, 1, {
+    delay: (index + 1) * .7,
+    opacity: 1
+  });
+})
