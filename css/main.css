@@ -368,3 +368,30 @@ header .badges .badge {
 .rewards .btn-group .sign-up {margin-right: 5px;}
 .rewards .btn-group .sign-in {width: 110px;}
 .rewards .btn-group .gift {margin-top: 10px;width: 100%;}
+
+/* YOUTUBE VIDEO */
+.youtube {position: relative;border:1px solid; height: 700px;overflow: hidden;background-color: #333;}
+.youtube .youtube__area {width: 1920px; background-color: #333;position: absolute; left: 50%; top:50%; transform: translate(-50%,-50%);}
+.youtube .youtube__area::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+}
+.youtube .youtube__cover {
+  background-image: url(../images/video_cover_pattern.png);
+  background-color: rgba(0, 0, 0, .3);
+  position:absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+}
+#player {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+}
