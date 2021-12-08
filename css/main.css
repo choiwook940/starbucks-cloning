@@ -246,3 +246,100 @@ header .badges .badge {
 .visual .fade-in {
   opacity: 0;
 }
+
+/* NOTICE */
+.notice {position:relative;}
+.notice .bg-left {position:absolute; top:0; left:0; width: 50%; height: 100%; background-color: #333;}
+.notice .bg-right {position:absolute; top:0; right:0; width: 50%; height: 100%; background-color: #f6f5ef;}
+.notice .inner {height: 62px; display: flex;}
+.notice .inner__left {width: 60%;height: 100%;display: flex; align-items: center; background-color: #333;}
+.notice .inner__left h2 {color:#fff; font-size: 17px; font-weight: 700; margin-right: 20px;}
+.notice .inner__left .swiper-container {height: 62px; flex-grow: 1; overflow: hidden;}
+.notice .inner__left .swiper-slide {display: flex; align-items: center;}
+.notice .inner__left .swiper-slide a {color: #FFF;}
+.notice .inner__left .notice-line__more {width: 62px; height: 62px; }
+.notice .inner__left .notice-line__more .material-icons {color: #fff;font-size: 30px; transform: translate(50%, 50%);}
+.notice .inner__right {width: 40%;height: 100%; display: flex; justify-content: end; align-items: center;}
+.notice .inner__right h2 {color:#333; font-size: 17px;font-weight: 700;}
+.notice .inner__right .toggle-promotion {cursor: pointer; width: 200px;height: 100%; display: flex; justify-content: end; align-items: center;}
+.notice .inner__right .toggle-promotion .material-icons {color: #333;font-size: 30px; margin-left: 20px;}
+.notice .promotion {height: 693px; background-color: #f6f5ef; position:relative; transition: height .4s; overflow: hidden;}
+.notice .promotion.hide {height: 0; }
+.notice .promotion.hide .swiper-pagination {opacity: 0;}
+.notice .promotion .swiper-container {
+  width: calc(819px * 3 + 20px);
+  height: 553px; 
+  position:absolute;
+  top:40px;
+  left:50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+.notice .promotion .swiper-slide {
+  opacity: .5;
+  transition: opacity 1s;
+  position: relative;
+}
+.notice .promotion .swiper-slide-active {
+  opacity: 1;
+}
+.notice .promotion .swiper-slide .btn {
+  position:absolute;
+  bottom: 0;
+  left:0;
+  right:0;
+  margin: auto;
+}
+.notice .promotion .swiper-pagination {
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  transition: .1s
+}
+.notice .promotion .swiper-pagination .swiper-pagination-bullet {
+  background-color: transparent;
+  background-image: url("../images/promotion_slide_pager.png");
+  width: 13px;
+  height: 12px;
+  margin-right: 6px;
+  outline: none;
+}
+.notice .promotion .swiper-pagination .swiper-pagination-bullet:last-child {
+  margin-right: 0;
+}
+.notice .promotion .swiper-pagination .swiper-pagination-bullet-active {
+  background-image: url("../images/promotion_slide_pager_on.png");
+}
+.notice .promotion .swiper-prev,
+.notice .promotion .swiper-next {
+  width: 42px;
+  height: 42px;
+  outline: none;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: absolute;
+  /* Swiper Container 높이의 절반만큼 끌어올림 */
+  /* 버튼 높이의 절반만큼 추가로 끌어올림 */
+  top: 300px;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .4s;
+}
+.notice .promotion .swiper-prev {
+  left: 50%;
+  margin-left: -480px;
+}
+.notice .promotion .swiper-next {
+  right: 50%;
+  margin-right: -480px;
+}
+.notice .promotion .swiper-prev:hover,
+.notice .promotion .swiper-next:hover {
+  background-color: #333;
+  color: #fff;
+}

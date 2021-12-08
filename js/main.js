@@ -39,3 +39,44 @@ fadeIns.forEach((fadeIn, index) => {
     opacity: 1
   });
 })
+
+// NOTICE Swiper(선택자, 옵션)
+new Swiper('.notice-line .swiper-container', {
+  direction: 'vertical',
+  autoplay: true,
+  loop: true
+});
+
+// NOTICE Promotion Swiper
+new Swiper('.promotion .swiper-container', {
+  slidesPerView: 3,
+  spaceBetween: 10,
+  centeredSlides: true,
+  loop: true,
+  autoplay: {
+    delay: 5000
+  },
+  pagination: {
+    el: '.promotion .swiper-pagination', // 페이지 번호 요소 선택자
+    clickable: true 
+  },
+  navigation: {
+    prevEl: '.promotion .swiper-prev',
+    nextEl: '.promotion .swiper-next'
+  }
+});
+
+const promotion = document.querySelector(".promotion");
+const promotionToggleBtn = document.querySelector(".toggle-promotion");
+const promotionToggleBtnIcon = promotionToggleBtn.querySelector(".material-icons");
+let isHidePromotion = false;
+promotionToggleBtn.addEventListener("click", () => {
+  isHidePromotion = !isHidePromotion;
+  if(isHidePromotion) {
+    promotion.classList.add("hide");
+    promotionToggleBtnIcon.textContent = "download"
+  } else {
+    promotion.classList.remove("hide");
+    promotionToggleBtnIcon.textContent = "upload"
+  }
+})
