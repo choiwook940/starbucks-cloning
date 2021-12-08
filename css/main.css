@@ -5,7 +5,6 @@ body {
   font-weight: 400;
   line-height: 1.4;
   font-family: "Nanum Gothic", sans-serif;
-  height: 3000px;
 }
 img {
   display: block;
@@ -343,3 +342,60 @@ header .badges .badge {
   background-color: #333;
   color: #fff;
 }
+
+/* REWARDS */
+.rewards {position:relative;}
+.rewards .bg-left {
+  width: 50%;
+  height: 100%;
+  background-color: #272727;
+  position:absolute;
+  top:0;
+  left: 0;
+}
+.rewards .bg-right {
+  width: 50%;
+  height: 100%;
+  background-color: #d5c798;
+  position:absolute;
+  top:0;
+  right: 0;
+}
+.rewards .inner {background-image: url(../images/rewards.jpg);height: 241px;}
+.rewards .btn-group {width: 250px; position:absolute; bottom:24px; right: 0;}
+.rewards .btn-group .btn {display: inline-block;}
+.rewards .btn-group .sign-up {margin-right: 5px;}
+.rewards .btn-group .sign-in {width: 110px;}
+.rewards .btn-group .gift {margin-top: 10px;width: 100%;}
+
+/* YOUTUBE VIDEO */
+.youtube {position: relative;border:1px solid; height: 700px;overflow: hidden;background-color: #333;}
+.youtube .youtube__area {width: 1920px; background-color: #333;position: absolute; left: 50%; top:50%; transform: translate(-50%,-50%);}
+.youtube .youtube__area::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+}
+.youtube .youtube__cover {
+  background-image: url(../images/video_cover_pattern.png);
+  background-color: rgba(0, 0, 0, .3);
+  position:absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+}
+#player {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+}
+.youtube .inner {height: 700px;}
+.youtube .floating1 {position: absolute; top: 50px; left: 0;}
+.youtube .floating2 {position: absolute; top: 350px; left: 150px;}
+.youtube .floating3 {position: absolute; bottom: -200px; right: 0;}
+
