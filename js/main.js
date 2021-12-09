@@ -127,3 +127,7 @@ spys.forEach(spy => {
     .setClassToggle(spy, 'show')
     .addTo(new ScrollMagic.Controller());
 })
+
+// FOOTER Copyright Year
+const thisYear = document.querySelector(".this-year");
+thisYear.textContent = new Date().getFullYear(); 
