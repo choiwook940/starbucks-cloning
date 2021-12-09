@@ -16,20 +16,36 @@ searchInput.addEventListener("blur", () => {
 })
 
 const badges = document.querySelector("header .badges");
+const toTop = document.querySelector("#to-top");
 window.addEventListener("scroll", _.throttle(() => {
   if(window.scrollY > 500){
     // gsap.to(요소, 지속시간, 옵션)
     gsap.to(badges, 0.6, {
       opacity: 0,
       display: "none"
+    });
+    // 버튼 보이기
+    gsap.to(toTop, .2, {
+      x: 0
     })
   } else {
     gsap.to(badges, 0.6, {
       opacity: 1,
       display: "block"
     })
+    // 버튼 숨기기
+    gsap.to(toTop, .2, {
+      x: 100
+    })
   }
 }, 300))
+
+// TO TOP
+toTop.addEventListener("click", () => {
+  gsap.to(window, .7, {
+    scrollTo: 0
+  })
+})
 
 // VISUAL Animation
 const fadeIns = document.querySelectorAll(".visual .fade-in");
