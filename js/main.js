@@ -41,14 +41,14 @@ fadeIns.forEach((fadeIn, index) => {
 })
 
 // NOTICE Swiper(선택자, 옵션)
-new Swiper('.notice-line .swiper-container', {
+new Swiper('.notice-line .swiper', {
   direction: 'vertical',
   autoplay: true,
   loop: true
 });
 
 // NOTICE Promotion Swiper
-new Swiper('.promotion .swiper-container', {
+new Swiper('.promotion .swiper', {
   slidesPerView: 3,
   spaceBetween: 10,
   centeredSlides: true,
@@ -63,6 +63,16 @@ new Swiper('.promotion .swiper-container', {
   navigation: {
     prevEl: '.promotion .swiper-prev',
     nextEl: '.promotion .swiper-next'
+  }
+});
+new Swiper('.awards .swiper', {
+  autoplay: true,
+  loop: true,
+  spaceBetween: 30,
+  slidesPerView: 5,
+  navigation: {
+    prevEl: '.awards .swiper-prev',
+    nextEl: '.awards .swiper-next'
   }
 });
 

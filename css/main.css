@@ -226,7 +226,7 @@ header .badges .badge {
 .notice .inner {height: 62px; display: flex;}
 .notice .inner__left {width: 60%;height: 100%;display: flex; align-items: center; background-color: #333;}
 .notice .inner__left h2 {color:#fff; font-size: 17px; font-weight: 700; margin-right: 20px;}
-.notice .inner__left .swiper-container {height: 62px; flex-grow: 1; overflow: hidden;}
+.notice .inner__left .swiper {height: 62px; flex-grow: 1; }
 .notice .inner__left .swiper-slide {display: flex; align-items: center;}
 .notice .inner__left .swiper-slide a {color: #FFF;}
 .notice .inner__left .notice-line__more {width: 62px; height: 62px; }
@@ -238,14 +238,13 @@ header .badges .badge {
 .notice .promotion {height: 693px; background-color: #f6f5ef; position:relative; transition: height .4s; overflow: hidden;}
 .notice .promotion.hide {height: 0; }
 .notice .promotion.hide .swiper-pagination {opacity: 0;}
-.notice .promotion .swiper-container {
+.notice .promotion .swiper {
   width: calc(819px * 3 + 20px);
   height: 553px; 
   position:absolute;
   top:40px;
   left:50%;
   transform: translateX(-50%);
-  overflow: hidden;
 }
 
 .notice .promotion .swiper-slide {
@@ -292,7 +291,7 @@ header .badges .badge {
   border: 2px solid #333;
   border-radius: 50%;
   position: absolute;
-  /* Swiper Container 높이의 절반만큼 끌어올림 */
+  /* Swiper 높이의 절반만큼 끌어올림 */
   /* 버튼 높이의 절반만큼 추가로 끌어올림 */
   top: 300px;
   z-index: 1;
@@ -429,3 +428,29 @@ header .badges .badge {
 .find-store .picture2 {top: 150px; left: 250px;}
 .find-store .text-group {position: absolute; top: 120px; left: 550px;}
 .find-store .text-group .description {margin:20px 0;}
+
+/* AWARDS */
+.awards {background-color: #272727;}
+.awards .inner {padding: 40px 0;}
+.awards .swiper-prev,
+.awards .swiper-next {
+  width: 42px;
+  height: 42px;
+  outline: none;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #FFF;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: .3;
+}
+.awards .swiper-prev {left: -100px;}
+.awards .swiper-next {right: -100px;}
+.awards .swiper-prev:hover,
+.awards .swiper-next:hover {background-color: #FFF;color: #333;}
