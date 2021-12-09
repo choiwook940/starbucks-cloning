@@ -16,20 +16,36 @@ searchInput.addEventListener("blur", () => {
 })
 
 const badges = document.querySelector("header .badges");
+const toTop = document.querySelector("#to-top");
 window.addEventListener("scroll", _.throttle(() => {
   if(window.scrollY > 500){
     // gsap.to(요소, 지속시간, 옵션)
     gsap.to(badges, 0.6, {
       opacity: 0,
       display: "none"
+    });
+    // 버튼 보이기
+    gsap.to(toTop, .2, {
+      x: 0
     })
   } else {
     gsap.to(badges, 0.6, {
       opacity: 1,
       display: "block"
     })
+    // 버튼 숨기기
+    gsap.to(toTop, .2, {
+      x: 100
+    })
   }
 }, 300))
+
+// TO TOP
+toTop.addEventListener("click", () => {
+  gsap.to(window, .7, {
+    scrollTo: 0
+  })
+})
 
 // VISUAL Animation
 const fadeIns = document.querySelectorAll(".visual .fade-in");
@@ -41,14 +57,14 @@ fadeIns.forEach((fadeIn, index) => {
 })
 
 // NOTICE Swiper(선택자, 옵션)
-new Swiper('.notice-line .swiper-container', {
+new Swiper('.notice-line .swiper', {
   direction: 'vertical',
   autoplay: true,
   loop: true
 });
 
 // NOTICE Promotion Swiper
-new Swiper('.promotion .swiper-container', {
+new Swiper('.promotion .swiper', {
   slidesPerView: 3,
   spaceBetween: 10,
   centeredSlides: true,
@@ -63,6 +79,16 @@ new Swiper('.promotion .swiper-container', {
   navigation: {
     prevEl: '.promotion .swiper-prev',
     nextEl: '.promotion .swiper-next'
+  }
+});
+new Swiper('.awards .swiper', {
+  autoplay: true,
+  loop: true,
+  spaceBetween: 30,
+  slidesPerView: 5,
+  navigation: {
+    prevEl: '.awards .swiper-prev',
+    nextEl: '.awards .swiper-next'
   }
 });
 
@@ -117,3 +143,7 @@ spys.forEach(spy => {
     .setClassToggle(spy, 'show')
     .addTo(new ScrollMagic.Controller());
 })
+
+// FOOTER Copyright Year
+const thisYear = document.querySelector(".this-year");
+thisYear.textContent = new Date().getFullYear(); 
